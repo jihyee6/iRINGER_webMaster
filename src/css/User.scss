@@ -1,0 +1,25 @@
+.user_body{
+    margin-top: 12px;
+    overflow-y: overlay;
+    height: 782px;
+}
+
+.user_content_body {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 98px 0px 0px 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.userSelect {
+    width: 100%;
+    height: 36px;
+    border-radius: 2px;
+    border: 1px solid #53677A;
+    background-color: #1E262E;
+    opacity: 60%;
+    font-size: 14px;
+    color: #AEBAC7;
+    font-weight: 500;
+    padding: 8px;
+}

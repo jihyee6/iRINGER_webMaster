@@ -1,0 +1,155 @@
+.wardTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #53677A;
+    border-radius: 2px;
+    padding: 0 16px;
+    background-color: #2F3A45;
+    width: 97%;
+}
+
+.wardName{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 16px 0;
+    line-height: 16px;
+}
+.wardBtn button{
+    color: #FFFFFFCC;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 2px;
+}
+.wardChange{
+    border: 1px solid #53677A;
+    background-color: #435464;
+    margin-right: 8px;
+}
+
+.wardDelete{
+    border: 1px solid #53677A;
+    background-color: #2F3A45;
+}
+
+.roomBox{
+    border: 1px solid #435464;
+    border-radius: 4px;
+    width: 260px;
+    height: 48px;
+    padding: 16px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+
+    p {
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFFFFFCC;
+        margin: 0 0 8px 0;
+    }
+    img{
+        margin-left: 6px;
+        cursor: pointer;
+    }
+    .roomInfo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    }
+}
+.roomList{
+    border-bottom: 1px solid #435464;
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.addBtn{
+    margin: 16px 0;
+    button{
+        border: 1px solid #53677A;
+        border-radius: 2px;
+        background-color: #34424F;
+        color: #FFFFFFCC;
+        font-size: 16px;
+        padding: 12px 122px;
+    }
+}
+
+.ward_wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wardInputBox{
+    display: flex;
+    align-items: center;
+    border: 1px solid #435464;
+    background-color: #2F3A45;
+    border-radius: 2px;
+    height: 36px;
+
+    input{
+        background-color: transparent;
+        border: none;
+        padding: 8px;
+    }
+}
+.countBox{
+    display: flex;
+    align-items: center;
+    div {
+        border: 1px solid #34424F;
+        background-color: #1E262E;
+        width: 68px;
+        height: 36px;
+        border-radius: 2px;
+        line-height: 36px;
+        padding-left: 10px;
+        margin-right: 8px;
+    };
+}
+.countBtn{
+    border: 1px solid #778A9D;
+    background-color: #34424F;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.wardSearchBox{
+    padding: 16px;
+    .wardSearchList{
+        background-color: #232D37;
+        // height: 614px;
+        overflow-y: auto;
+        margin-top: 16px;
+        max-height: 58.2vh;
+        min-height: 58.2vh;
+        ul{
+            padding: 0;
+            margin: 0;
+            li{
+                list-style: none;
+                height: 44px;
+                line-height: 44px;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+        }
+        .wardClick{
+            background-color: #2F3A45;
+        }
+    }
+}

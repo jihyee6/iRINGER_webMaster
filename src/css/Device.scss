@@ -1,0 +1,26 @@
+@import "Standard";
+
+.device_contents_body {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 16% 84%;
+    padding: 98px 0px 0px 12px;
+    color: $basic_white;
+}
+
+.radio_wrapper {
+    padding: 14px 16px 8px;
+
+    span {
+        margin-right: 16px;
+    }
+}
+
+.device_body {
+    margin-top: 12px;
+    overflow-y: overlay;
+    height: 782px;
+    //padding-left: 12px;
+    //padding-right: 24px;
+}

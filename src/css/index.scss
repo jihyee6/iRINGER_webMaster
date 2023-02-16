@@ -1,0 +1,374 @@
+@import "Standard";
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	font-family: $fonts;
+    background-color: $background_body;
+	/* 일단 크기 막음 */
+	min-width: 968px;
+	min-height: 690px;
+}
+
+button {
+	@include click_box();
+}
+
+input[type="text"], input[type="password"] {
+	font-family: $fonts;
+	color: $basic_white;
+	font-size: 16px;
+	padding: 16px;
+}
+
+.date_wrapper {
+	padding: 8px 16px;
+
+	div {
+		position: relative;
+	}
+
+	div:first-child {
+		margin-bottom: 10px;
+	}
+}
+
+input[type="date"] {
+	width: 100%;
+	height: 36px;
+	font-size:14px;
+	color: #AEBAC7;
+	padding: 12px;
+	background-color: $background_subject;
+	border: 1px solid #AEBAC7;
+	box-sizing: border-box;
+	font-family: $fonts;
+	font-size: 14px;
+
+	:first-child {
+		margin-bottom: 10px;
+	}
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {display: none;}
+input[type="date"]::-webkit-calendar-picker-indicator {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	color: transparent;
+	font-family: $fonts;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+input[type='date']::before {
+	content: attr(data-placeholder);
+	width: 100%;
+	font-family: $fonts;
+	font-size: 14px;
+}
+  
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+	display: none;
+	font-family: $fonts;
+	font-size: 14px;
+}
+
+#root {
+	height: 100%;
+	position: relative;
+}
+
+.input_text {
+	width: 360px;
+    box-sizing: border-box;
+	height: 48px;
+	background-color: $background_subject;
+	border: 1px solid $background_button;
+	border-radius: 4px;
+
+	&.M {
+		width: 100%;
+		height: 40px;
+		background-image: url("../../public/assets/images/search.png");
+		background-size: auto;
+    	background-repeat: no-repeat;
+		background-position: 13px center;
+		padding: 5px 36px;
+		color: #AEBAC7;
+
+	}
+
+	&.S_S {
+		width: 50%;
+		height: 36px;
+		color: $basic_white;
+		opacity: 60%;
+		font-size: 16px;
+		border-radius: 2px;
+		padding: 10px;
+		background-color: #1E262E;
+	}
+
+	&.S_M {
+		width: 280px;
+		height: 40px;
+		color: $basic_white;
+		opacity: 60%;
+		font-size: 15px;
+		border-radius: 2px;
+	}
+
+	&.XS_M {
+		width: 100%;
+		height: 36px;
+		color: $basic_white;
+		opacity: 60%;
+		font-size: 16px;
+		border-radius: 2px;
+		padding: 10px;
+		background-color: #1E262E;
+	}
+
+	&.XXS_M {
+		width: 78px;
+		height: 36px;
+		color: $basic_white;
+		opacity: 60%;
+		font-size: 16px;
+		border-radius: 2px;
+		padding: 10px;
+		background-color: #1E262E;
+		margin-right: 6px;
+		margin-top: 6px;
+	}
+
+}
+
+input.M:focus {
+	background-image: none;
+	padding: 16px 16px;
+}
+
+
+.search_wrapper {
+	padding: 2px 16px 8px;
+}
+
+.submit_btn {
+	width: 360px;
+    box-sizing: border-box;
+	height: 48px;
+	background-color: $background_button;
+	border: 1px solid $background_button;
+	border-radius: 4px;
+	color: $white;
+	font-size: 16px;
+}
+
+// paging
+.next, .prev {
+    font-size: 20px;
+    @include click_box();
+	&.null_data {
+		color: #98A4AF;
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 8px;
+	div {
+		user-select: none;
+	}
+}
+
+.alarm_body {
+    overflow-y: overlay;
+    height: 782px;
+    /* padding-left: 12px;
+    padding-right: 24px; */
+}
+
+.modal_head {
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+	background-color: $background_body;
+	&.border_b {
+		border-bottom: 1px solid $background_subject;
+	}
+}
+
+.modal_close {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+	.modal_close_btn {
+		cursor: pointer;
+		background: $background_subject;
+    	padding: 1.7px 7.9px 3.35px;
+    	border-radius: 16px;
+	}
+
+	.side_modal_close_btn {
+		cursor: pointer;
+		color: $basic_white;
+		opacity: 60%;
+	}
+}
+
+.modal_body {
+	padding: 24px 16px;
+    box-sizing: border-box;
+    width: 100%;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: $background_subject;
+	table {
+		background-color: $background_subject;
+		border: 0.5px solid #5F768B;
+		border-spacing: 0;
+		font-size: 14px;
+		width: 100%;
+
+		tbody.modal_notice {
+			tr {
+				td.subject {
+					width: 18%;
+				}
+			}
+		}
+
+		tr {
+			td{
+				border: 0.5px solid #5F768B;
+				padding: 12px 10px;
+			}
+
+			td.subject {
+				background-color: $background_body;
+				font-weight: 600;
+				text-align: center;
+			}
+
+			&.contents_row {
+				height: 280px;
+			}
+
+		}
+	}
+}
+
+.notification {
+	display: flex;
+    flex-wrap: wrap;
+	width: 400px;
+	height: 224px;
+	background-color: #34424F;
+	margin: 0px 16px 24px 0px;
+	border: 1.5px solid #435464;
+	z-index: 100;
+
+	.modal_head {
+		background-color: #34424F;
+		color: $basic_white;
+		font-size: 18px;
+		font-weight: 700;
+		border: 0.5px solid #435464;
+		height: 42px;
+	}
+
+	.modal_close_btn {
+		background-color: #232D37;
+		padding: 1.3px 7.9px 3.35px;
+		span {
+			font-weight: 100;
+		}
+	}
+
+	.notification_body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 0.5px solid #435464;
+		width: 100%;
+		color: $basic_white;
+		//height: 129.33px;
+		padding: 16px 0px;
+		div {
+			width: 100%;
+		}
+
+		._location {
+			margin-top: 4px;
+			font-size: 30px;
+			font-weight: 700;
+		}
+		._status {
+			margin-top: 6px;
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+
+	.notification_foot {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 0.5px solid #435464;
+		width: 100%;
+		color: $basic_white;
+		height: 48px;
+	}
+
+	.info_name {
+		padding : 8px 16px;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 6px;  /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #53677A; /* 스크롤바의 색상 */
+    border-radius: 3px;
+}
+
+.not_found_body {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 98px 0px 0px 12px;
+    color: $basic_white;
+	justify-content: center;
+}
+
+.not_found {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+	div {
+		position: absolute;
+		margin-bottom: 100px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	img {
+		opacity: 0.4;
+	}
+}

@@ -1,0 +1,246 @@
+@import "Standard";
+
+$using_color : #6089F3;
+$before_color : #FFF701;
+$bed_wating_color : #F09610;
+
+.station_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 24px 24px 14px 12px;
+
+}
+
+.station_status {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.station_status_box {
+    // padding-left: 24px;
+}
+
+.station_subject {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.station_contents_body {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 98px 0px 0px 12px;
+    color: $basic_white;
+}
+
+.select_wrapper_L {
+
+    select {
+        height: 48px;
+        width: 292px;
+        border-radius: 2px;
+        border: 1px solid #AEBAC7;
+        background-color: $background_body;
+        font-size: 24px;
+        color: #AEBAC7;
+        font-weight: 700;
+        padding: 8px 12px;
+    }
+}
+
+.total_device, .station_waiting_device {
+    font-weight: 600;
+}
+
+.useing_device {
+    color: $using_color;
+    font-weight: 600;
+    &.state_box_font {
+        font-size: 21px;
+    }
+}
+
+.before_10_device {
+    color: $before_color;
+    font-weight: 600;
+    &.state_box_font {
+        font-size: 21px;
+    }
+}
+
+.bed_waiting_device {
+    color: $bed_wating_color;
+    font-weight: 600;
+    &.state_box_font {
+        font-size: 21px;
+    }
+}
+
+.station_body {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: overlay;
+    height: 80vh;
+    padding: 0px 24px 0px 12px;
+    gap: 24px;
+}
+
+.station_box {
+    width: 448px;
+    height: 432px;
+    border-radius: 4px;
+    background-color: $background_contents;
+    // margin: 0px 12px 24px;
+}
+
+.station_box_head {
+    height: 80px;
+    background-color: $background_subject;   
+    padding: 12px 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.station_room_name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.station_state {
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    align-items: center;
+    width: 306px;
+    border-radius: 2px;
+    height: 56px;
+    background-color: $background_body;
+    div:last-child {
+        border-right: none;
+    }
+}
+
+.station_state_box {
+    font-size: 14px;
+    width: 100%; 
+    border-right: 1px solid $background_contents;
+    text-align: center;
+}
+
+.station_box_body {
+    padding: 16px;
+}
+
+.station_box_body_head {
+    background-color: $background_subject;
+    height: 32px;
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    align-items: center;
+    justify-items: center;
+}
+
+.station_box_body_body {
+    height: 288px;
+    overflow-y: overlay;
+    background-color: $background_body;
+    box-sizing: border-box;
+    /* div:last-child {
+        border-bottom: none;
+    } */
+}
+
+.station_box_body_row {
+    height: 48px;
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    align-items: center;
+    justify-items: center;
+    border-bottom: 1px solid $background_contents;
+    box-sizing: border-box;
+}
+
+// 상태 서클
+.using_circle {
+    background-color: $using_color;
+    width: 14px;
+    height: 14px;
+    border-radius: 12px;
+}
+
+.before_circle {
+    background-color: $before_color;
+    width: 14px;
+    height: 14px;
+    border-radius: 12px;
+}
+
+.waiting_circle {
+    background-color: $bed_wating_color;
+    width: 14px;
+    height: 14px;
+    border-radius: 12px;
+}
+
+.modal_body {
+    table.station_modal_table {
+        border: none;
+        background-color: $background_body;
+        font-size: 16px;
+        
+        tbody {
+            tr{
+                td:first-child {
+                    width: 20%;
+                }
+                td{
+                    border: none;
+                    padding: 16px 0px 16px 20px;
+
+                    &.not_padding {
+                        padding: 0px 20px;
+                        
+                        &.add_btn {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        
+                    }
+
+                    &.sidebar_modal {
+                        padding: 6px 12px 12px 20px;
+                    }
+
+                    &.sidebar_top_modal {
+                        padding: 12px 20px;
+                    }
+
+                }
+                
+            }
+        }
+    }
+}
+
+.station_modal_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.ml_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calc_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}

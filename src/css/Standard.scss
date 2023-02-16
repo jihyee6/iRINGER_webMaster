@@ -1,0 +1,14 @@
+$white: #ffffff;
+$basic_white : rgba(255, 255, 255, 0.8);
+$background_body : #232D37;
+$background_subject : #34424F;
+$background_contents : #435464;
+$background_button: #53677A;
+$warning_color: rgba(234, 93, 93, 0.8);
+$alarm_color: #FF395C;
+$fonts: "Pretendard";
+
+@mixin click_box() {
+	cursor: pointer;
+	font-family: $fonts;
+};
